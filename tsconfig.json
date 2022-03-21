@@ -1,0 +1,62 @@
+{
+    "compilerOptions": {
+        // Indicates which JS features are downleveled and which are left 
+        // intact.
+        // https://www.typescriptlang.org/tsconfig#target
+        "target": "es6",
+        // Defines which type definitions for built in JS APIs are available.
+        // https://www.typescriptlang.org/tsconfig#lib
+        "lib": ["dom", "dom.iterable", "esnext"],
+        // Skips type checking of declaration files. This can save time during 
+        // compilation at the expensive of type-system accuracy.
+        // https://www.typescriptlang.org/tsconfig#skipLibCheck
+        "skipLibCheck": true,
+        // Don't treat CommonJS/AMD/UMD modules like ES6 modules.
+        // https://www.typescriptlang.org/tsconfig#esModuleInterop
+        "esModuleInterop": true,
+        // Allows us to write an import like `import React from "react";` 
+        // instead of `import * as React from "react";`.
+        // https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports
+        "allowSyntheticDefaultImports": true,
+        // Enables a wide range of type checking behavior that results in 
+        // stronger guarantees of program correctness.
+        // https://www.typescriptlang.org/tsconfig#strict
+        "strict": true,
+        // Show errors if a program tries to include a file by a casing 
+        // different from the casing on disk.
+        // https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames
+        "forceConsistentCasingInFileNames": true,
+        // Ensures that non-empty case inside a switch statement includes 
+        // either `break` or `return`.
+        // https://www.typescriptlang.org/tsconfig#noFallthroughCasesInSwitch
+        "noFallthroughCasesInSwitch": true,
+        // Sets the module system of the program.
+        // https://www.typescriptlang.org/tsconfig#module
+        "module": "es6",
+        // Specifies the module resolution strategy. This will almost always 
+        // be "node".
+        // https://www.typescriptlang.org/tsconfig#moduleResolution
+        "moduleResolution": "node",
+        // Allows importing modules with a `.json` extension.
+        // https://www.typescriptlang.org/tsconfig#resolveJsonModule
+        "resolveJsonModule": true,
+        // Warns us if we write code that can't be correctly interpreted by a 
+        // single-file transpilation process.
+        // https://www.typescriptlang.org/tsconfig#isolatedModules
+        "isolatedModules": true,
+        // The directory to emit the files to.
+        // https://www.typescriptlang.org/tsconfig#outDir
+        "outDir": "./dist/",
+        // Have TypeScript issue an error when `any` would be inferred.
+        // https://www.typescriptlang.org/tsconfig#noImplicitAny
+        "noImplicitAny": true,
+        // Enables the generation of sourcemap files which allow debuggers and 
+        // other tools to display the original TypeScript source code when 
+        // actually working with the emitted JavaScript files.
+        // https://www.typescriptlang.org/tsconfig#sourceMap
+        "sourceMap": true
+    },
+    // Specifies an array of filenames or patterns to include in the program.
+    // https://www.typescriptlang.org/tsconfig#type-include
+    "include": ["src"]
+}
