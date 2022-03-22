@@ -27,8 +27,7 @@ The following dependencies are used to power the template and the developer expe
 - [Prettier](https://prettier.io/) to enforce a consistent code style throughout the library.
 - [ESLint](https://eslint.org/) to find problems in the code before deploying.
 - [Jest](https://jestjs.io/) as the test runner.
-- [Webpack](https://webpack.js.org/) to build our examples.
-- [http-server](https://github.com/http-party/http-server) to run our examples.
+- [Webpack](https://webpack.js.org/) to build and run our examples in the browser.
 
 ## Visual Studio Code Extensions
 
@@ -55,7 +54,7 @@ To create a new test, either create a new file under the `test` directory or add
 
 ### Examples
 
-The examples are small samples of the library that run in the browser with the help of [Webpack](https://webpack.js.org/). Using Webpack for the examples enables us to write the examples in TypeScript, build them, and then run them using [http-server](https://github.com/http-party/http-server).
+The examples are small samples of the library that run in the browser with the help of [Webpack](https://webpack.js.org/). Using Webpack for the examples enables us to write the examples in TypeScript, build them, and then run them using the [Webpack dev server](https://webpack.js.org/configuration/dev-server/).
 
 Below is a step-by-step process of creating an example:
 
@@ -69,7 +68,7 @@ Below is a step-by-step process of creating an example:
 
 5. Run `npm run examples:build` to build all of the examples and generate the JavaScript from the TypeScript source.
 
-Now you can run `npm run examples:run` to run all of the examples. This will start the http server at `localhost:8080` so you'll have to navigate to the example page. For example, for the `greeting` example, you would navigate to `localhost:8080/greeting` to see that example run.
+Now you can run `npm run examples:run` to run all of the examples. This will start the Webpack dev server at `localhost:3000` so you'll have to navigate to the example page. For example, for the `greeting` example, you would navigate to `localhost:3000/examples/greeting` to see that example run.
 
 ## Scripts
 
@@ -83,7 +82,7 @@ The following scripts are available and can be used in the form of `npm run [scr
 
 - `examples:build` - Uses [Webpack](https://webpack.js.org/) to build the TypeScript source for all of the examples and outputs the resulting JavaScript to the `./examples/dist` directory, which should then be used in the script tags of each individual example. See the [examples](#examples) section for more details about this.
 
-- `examples:run` - Uses [http-server](https://github.com/http-party/http-server) to run the examples in the browser. The http server will be started at the root of the examples directory so you'll need to navigate to each individual example. See the [examples](#examples) section for more details about this.
+- `examples:run` - Uses the [Webpack dev server](https://webpack.js.org/configuration/dev-server/) to run the examples in the browser. This dev server will be started at the root of the examples directory so you'll need to navigate to each individual example. See the [examples](#examples) section for more details about this.
 
 - `format:check` - Runs [Prettier](https://prettier.io/) and checks for formatting issues but it doesn't fix anything.
 
