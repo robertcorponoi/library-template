@@ -24,6 +24,6 @@ jobs:
             # Run `npm ci` to install dependencies.
             - name: Install dependencies
               run: npm ci
-            # Lastly build the app.
-            - name: Build the app
-              run: npm run build
+            # Lastly create the Rollup bundle.
+            - name: Create the Rollup bundle
+              run: npm run bundle
