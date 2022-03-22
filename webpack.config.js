@@ -10,6 +10,10 @@ module.exports = {
     entry: {
         "greeting": "./examples/greeting/index.ts",
     },
+    // The mode to use. Since these are examples and the built files aren't 
+    // checked into version control we can use production.
+    // https://webpack.js.org/configuration/mode/
+    mode: "production",
     // Defines how our exported JavaScript modules are transformed according 
     // to the rules used.
     // https://webpack.js.org/configuration/module/
@@ -39,12 +43,5 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname, "examples", "dist"),
         filename: "[name].js",
-    },
-    // Tells Webpack to serve everything from our examples directory to 
-    // localhost:3000.
-    // https://webpack.js.org/guides/development/#using-webpack-dev-server
-    devServer: {
-        port: 3000,
-        static: "./examples",
     },
 };
