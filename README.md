@@ -12,6 +12,7 @@ An opinionated template for creating JavaScript libraries.
     - [Examples](#examples)
 - [Scripts](#scripts)
 - [GitHub Actions](#github-actions)
+- [Dependabot](#dependabot)
 - [Keeping Up To Date With Template Changes](#keeping-up-to-date-with-template-changes)
 - [License](#license)
 
@@ -98,6 +99,12 @@ The workflow at `.github/workflows/build.yml` will run whenever a pull request i
 This action will install the dependencies and build the template.
 
 More actions are planned to be added for deployment of the template.
+
+## Dependabot
+
+This template uses [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates) to automatically update out of date packages. The configuration for depedabot can be found at `.github/dependabot.yml`.
+
+See the documentation linked above for more information about Dependabot and how to use it.
 
 ## Keeping Up To Date With Template Changes
 
