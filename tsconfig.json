@@ -54,7 +54,14 @@
         // other tools to display the original TypeScript source code when 
         // actually working with the emitted JavaScript files.
         // https://www.typescriptlang.org/tsconfig#sourceMap
-        "sourceMap": true
+        "sourceMap": true,
+        // Generates a `.d.ts` file for every TypeScript file in the 
+        // application.
+        // https://www.typescriptlang.org/tsconfig#declaration
+        "declaration": true,
+        // Only emits `.d.ts` files and not `.js` files.
+        // https://www.typescriptlang.org/tsconfig#emitDeclarationOnly
+        "emitDeclarationOnly": true,
     },
     // Specifies an array of filenames or patterns to include in the program.
     // https://www.typescriptlang.org/tsconfig#type-include

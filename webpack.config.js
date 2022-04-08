@@ -10,6 +10,11 @@ module.exports = {
     entry: {
         "greeting": "./examples/greeting/index.ts",
     },
+    // The environment that we are developing for. Since we use Webpack to 
+    // build the examples, this is always "development" for better errors.
+    // https://webpack.js.org/configuration/mode/
+    mode: "development",
+    // 
     // Defines how our exported JavaScript modules are transformed according 
     // to the rules used.
     // https://webpack.js.org/configuration/module/
@@ -46,5 +51,11 @@ module.exports = {
     devServer: {
         port: 3000,
         static: "./examples",
+        devMiddleware: {
+            writeToDisk: true,
+        },
     },
+    // The environment to have Webpack target.
+    // https://webpack.js.org/configuration/target/
+    target: "web",
 };
