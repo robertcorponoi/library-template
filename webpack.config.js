@@ -25,7 +25,12 @@ module.exports = {
             // https://webpack.js.org/guides/typescript/
             {
                 test: /\.tsx?$/,
-                use: "ts-loader",
+                use: [{
+                    loader: "ts-loader",
+                    options: {
+                        configFile: "tsconfig.webpack.json",
+                    },
+                }],
                 exclude: /node_modules/,
             },
         ],

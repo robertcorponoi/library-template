@@ -70,6 +70,13 @@ Below is a step-by-step process of creating an example:
 
 Now you can run `npm run examples:run` to run all of the examples. This will start the Webpack dev server at `localhost:3000` so you'll have to navigate to the example page. For example, for the `greeting` example, you would navigate to `localhost:3000/examples/greeting` to see that example run.
 
+You'll also notice that there are two `tsconfig.json` files:
+
+- The `tsconfig.json` file is used by Rollup when bundling the library.
+- The `tsconfig.webpack.json` file is used by Webpack when building the examples.
+
+The difference between the two is that the base `tsconfig.json` doesn't output JavaScript files since that's handled by Rollup while the `tsconfig.webpack.json` needs to emit JavaScript files for the examples.
+
 ## Scripts
 
 The following scripts are available and can be used in the form of `npm run [script_name]`:
