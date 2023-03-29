@@ -27,7 +27,7 @@ jobs:
               run: npm ci
             # Create the Rollup bundle.
             - name: Create the Rollup bundle
-              run: npm run bundle
+              run: npm run build
             # Run the tests.
             - name: Run tests
               run: npm run test
