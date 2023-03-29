@@ -4,14 +4,15 @@ on: [pull_request]
 # The name of the workflow to be displayed on the repository's actions page.
 name: CI
 
-# A list of the jobs that will run during the workflow. Each job runs 
+# A list of the jobs that will run during the workflow. Each job runs
 # independently of the others and on different virtual environments.
 # We have a single job, which:
-# 1. Runs `npm install` to install the dependencies.
-# 2. Runs `npm build` to build the app.
+# 1. Runs `npm ci` to install the dependencies.
+# 2. Runs `npm run build` to build the app.
+# 3. Runs `npm run test` to run the tests.
 jobs:
     build:
-        name: Build App
+        name: Build and Test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -19,11 +20,14 @@ jobs:
             # https://github.com/actions/setup-node
             - uses: actions/setup-node@v2
               with:
-                node-version: '16.13.2'
-                check-latest: true
+                  node-version: "16.13.2"
+                  check-latest: true
             # Run `npm ci` to install dependencies.
             - name: Install dependencies
               run: npm ci
-            # Lastly create the Rollup bundle.
+            # Create the Rollup bundle.
             - name: Create the Rollup bundle
               run: npm run bundle
+            # Run the tests.
+            - name: Run tests
+              run: npm run test
