@@ -1,14 +1,19 @@
 {
-    "name": "app-template",
+    "name": "typescript-library-template",
     "version": "0.1.0",
     "author": "Robert Corponoi",
     "license": "MIT",
     "description": "An opinionated template for creating Typescript libraries.",
+    "repository": {
+        "url": "robertcorponoi/typescript-library-template"
+    },
     "type": "module",
     "exports": {
         ".": {
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/index.js"
+            }
         }
     },
     "engines": {
