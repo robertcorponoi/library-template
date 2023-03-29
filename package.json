@@ -1,8 +1,19 @@
 {
     "name": "app-template",
     "version": "0.1.0",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "author": "Robert Corponoi",
+    "license": "MIT",
+    "description": "An opinionated template for creating Typescript libraries.",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "engines": {
+        "node": ">=14.16"
+    },
     "scripts": {
         "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
         "build:watch": "rollup -c rollup.config.js --bundleConfigAsCjs --watch",
@@ -18,10 +29,9 @@
     },
     "files": [
         "/dist",
-        "/src"
+        "README.md",
+        "LICENSE"
     ],
-    "author": "Robert Corponoi",
-    "license": "MIT",
     "devDependencies": {
         "@rollup/plugin-typescript": "^11.0.0",
         "@types/jest": "^29.5.0",
