@@ -7,11 +7,12 @@ name: CI
 # A list of the jobs that will run during the workflow. Each job runs
 # independently of the others and on different virtual environments.
 # We have a single job, which:
-# 1. Runs `npm install` to install the dependencies.
-# 2. Runs `npm build` to build the app.
+# 1. Runs `npm ci` to install the dependencies.
+# 2. Runs `npm run build` to build the app.
+# 3. Runs `npm run test` to run the tests.
 jobs:
     build:
-        name: Build App
+        name: Build and Test
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
