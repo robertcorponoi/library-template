@@ -1,40 +1,40 @@
-# Library Template 
+# Library Template
 
-An opinionated template for creating JavaScript libraries.
+An opinionated template for creating Typescript libraries.
 
 **Table of Contents**
 
-- [Dependencies](#dependencies)
-- [Visual Studio Code Extensions](#visual-studio-code-extensions)
-- [Concepts](#concepts)
-    - [Bundling](#bundling)
-    - [Testing](#testing)
-    - [Examples](#examples)
-- [Scripts](#scripts)
-- [GitHub Actions](#github-actions)
-- [Dependabot](#dependabot)
-- [Keeping Up To Date With Template Changes](#keeping-up-to-date-with-template-changes)
-- [License](#license)
+-   [Dependencies](#dependencies)
+-   [Visual Studio Code Extensions](#visual-studio-code-extensions)
+-   [Concepts](#concepts)
+    -   [Bundling](#bundling)
+    -   [Testing](#testing)
+    -   [Examples](#examples)
+-   [Scripts](#scripts)
+-   [GitHub Actions](#github-actions)
+-   [Dependabot](#dependabot)
+-   [Keeping Up To Date With Template Changes](#keeping-up-to-date-with-template-changes)
+-   [License](#license)
 
-## Dependencies 
+## Dependencies
 
 The following dependencies are used to power the template and the developer experience.
 
 **Dev Dependencies**
 
-- [Rollup](https://rollupjs.org/guide/en/) to bundle the library.
-- [TypeScript](https://www.typescriptlang.org/) for type safety and a more predictable development experience.
-- [Prettier](https://prettier.io/) to enforce a consistent code style throughout the library.
-- [ESLint](https://eslint.org/) to find problems in the code before deploying.
-- [Jest](https://jestjs.io/) as the test runner.
-- [Webpack](https://webpack.js.org/) to build and run our examples in the browser.
+-   [Rollup](https://rollupjs.org/guide/en/) to bundle the library.
+-   [TypeScript](https://www.typescriptlang.org/) for type safety and a more predictable development experience.
+-   [Prettier](https://prettier.io/) to enforce a consistent code style throughout the library.
+-   [ESLint](https://eslint.org/) to find problems in the code before deploying.
+-   [Jest](https://jestjs.io/) as the test runner.
+-   [Webpack](https://webpack.js.org/) to build and run our examples in the browser.
 
 ## Visual Studio Code Extensions
 
 The follow extensions for code formatting and linting should be recommended to you if you open the project in Visual Studio Code:
 
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to automatically format files according to the Prettier configuration.
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) to automatically highlight issues in the code according to the ESLint configuration.
+-   [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to automatically format files according to the Prettier configuration.
+-   [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) to automatically highlight issues in the code according to the ESLint configuration.
 
 ## Concepts
 
@@ -72,8 +72,8 @@ Now you can run `npm run examples:run` to run all of the examples. This will sta
 
 You'll also notice that there are two `tsconfig.json` files:
 
-- The `tsconfig.json` file is used by Rollup when bundling the library.
-- The `tsconfig.webpack.json` file is used by Webpack when building the examples.
+-   The `tsconfig.json` file is used by Rollup when bundling the library.
+-   The `tsconfig.webpack.json` file is used by Webpack when building the examples.
 
 The difference between the two is that the base `tsconfig.json` doesn't output JavaScript files since that's handled by Rollup while the `tsconfig.webpack.json` needs to emit JavaScript files for the examples.
 
@@ -81,23 +81,23 @@ The difference between the two is that the base `tsconfig.json` doesn't output J
 
 The following scripts are available and can be used in the form of `npm run [script_name]`:
 
-- `bundle` - Creates a bundle of the library using [Rollup](https://rollupjs.org/guide/en/) and outputs it to the `dist` directory.
+-   `bundle` - Creates a bundle of the library using [Rollup](https://rollupjs.org/guide/en/) and outputs it to the `dist` directory.
 
-- `bundle:watch` - Like the `build` command, but it also watches for changes to the `src` directory and re-bundles automatically.
+-   `bundle:watch` - Like the `build` command, but it also watches for changes to the `src` directory and re-bundles automatically.
 
-- `generate-types` - Uses [tsc](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to generate the types and output them to the `dist` directory.
+-   `generate-types` - Uses [tsc](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to generate the types and output them to the `dist` directory.
 
-- `examples:build` - Uses [Webpack](https://webpack.js.org/) to build the TypeScript source for all of the examples and outputs the resulting JavaScript to the `./examples/dist` directory, which should then be used in the script tags of each individual example. See the [examples](#examples) section for more details about this.
+-   `examples:build` - Uses [Webpack](https://webpack.js.org/) to build the TypeScript source for all of the examples and outputs the resulting JavaScript to the `./examples/dist` directory, which should then be used in the script tags of each individual example. See the [examples](#examples) section for more details about this.
 
-- `examples:run` - Uses the [Webpack dev server](https://webpack.js.org/configuration/dev-server/) to run the examples in the browser. This dev server will be started at the root of the examples directory so you'll need to navigate to each individual example. See the [examples](#examples) section for more details about this.
+-   `examples:run` - Uses the [Webpack dev server](https://webpack.js.org/configuration/dev-server/) to run the examples in the browser. This dev server will be started at the root of the examples directory so you'll need to navigate to each individual example. See the [examples](#examples) section for more details about this.
 
-- `format:check` - Runs [Prettier](https://prettier.io/) and checks for formatting issues but it doesn't fix anything.
+-   `format:check` - Runs [Prettier](https://prettier.io/) and checks for formatting issues but it doesn't fix anything.
 
-- `format:write` - Runs [Prettier](https://prettier.io/) and fixes any formatting issues according to the `.prettierrc.js` file.
+-   `format:write` - Runs [Prettier](https://prettier.io/) and fixes any formatting issues according to the `.prettierrc.js` file.
 
-- `lint` - Runs [ESLint](https://eslint.org/) to check for issues with the code.
+-   `lint` - Runs [ESLint](https://eslint.org/) to check for issues with the code.
 
-- `test` - Runs the [Jest](https://jestjs.io/) tests.
+-   `test` - Runs the [Jest](https://jestjs.io/) tests.
 
 ## GitHub Actions
 
